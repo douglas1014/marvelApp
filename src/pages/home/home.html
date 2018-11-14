@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar danger>
+    <ion-title>
+      Heroes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-list>
+    <ion-item class="home" (click)="getDescription(hero.id)" *ngFor="let hero of heroes">
+      <ion-avatar item-left>
+        <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
+      </ion-avatar>
+      <h2 class="hero-name">{{hero.name}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
